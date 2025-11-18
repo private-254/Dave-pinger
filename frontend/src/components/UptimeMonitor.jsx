@@ -221,7 +221,7 @@ const UptimeMonitor = () => {
                   ? 'text-white' 
                   : 'text-slate-900'
               }`}>
-                Zero Ping Uptime Monitor
+                Dave Uptime Monitor
               </h1>
               <div className="flex items-center justify-center gap-2 mt-1">
                 <Clock className={`w-4 h-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`} />
