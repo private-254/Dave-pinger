@@ -1,0 +1,18 @@
+services:
+  # Full Stack Service (Frontend + Backend in one)
+  - type: web
+    name: zero-ping-uptime-monitor
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && cd frontend && npm install && npm run build && cd ../backend && npm install
+    startCommand: cd backend && node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
